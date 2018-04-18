@@ -8,7 +8,7 @@ function createServiceMixin (execlib) {
 
   function ServiceMixin (prophash) {
     if (prophash && 'userbankname' in prophash) {
-      this.findRemote(this.clusterDependentRemotePath(prophash.userbankname, null, 'UserBank'));
+      this.findRemote(this.clusterDependentRemotePath(prophash.userbankname), null, 'UserBank');
       this.state.data.listenFor('UserBank', this.onUserBank.bind(this), true);
     }
   }
