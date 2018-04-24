@@ -1,8 +1,11 @@
 function createLib (execlib) {
   'use strict';
 
+  var template = require('./templatecreator')(execlib);
+
   return {
-    servicemixin: require('./servicemixincreator')(execlib)
+    template: template,
+    servicemixin: require('./servicemixincreator')(execlib, template)
   };
 }
 
