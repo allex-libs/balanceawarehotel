@@ -1,6 +1,6 @@
 {
   "name": "allex_balanceawarehotellib",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "AllexJS lib with a Mixin that makes a hotel Service aware of the UserBank",
   "main": "index.js",
   "scripts": {

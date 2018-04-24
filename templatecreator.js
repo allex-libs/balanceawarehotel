@@ -37,12 +37,11 @@ function createTemplate (execlib) {
     };
     ret.prototype.destroy = lib.dummyFunc;
     ret.prototype[onmethod] = function (sink) {
-      console.log(onmethod, !!sink);
       taskRegistry.run('queryLevelDB',{
         sink: sink,
         scanInitially: true,
         filter: {},
-        onPut: (change) => { console.log(updatebmname, change[1]); this.tellApartment(change[0], updatebmname, change[1]) },
+        onPut: (change) => { this.tellApartment(change[0], updatebmname, change[1]) },
         onDel: lib.dummyFunc
       });
     };
